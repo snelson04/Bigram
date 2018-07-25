@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flags", "VAE.CLI.Flags\Flags.csproj", "{BF7A8280-80E6-4A59-86CE-C7C425177D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flags.Test", "VAE.CLI.Flags.Test\Flags.Test.csproj", "{45A03B7E-B72F-4403-A46C-CC92B33E3088}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{24CA8CB3-08D3-4C95-BF9F-CDDAEE3515EB}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bigram.Core", "Bigram.Core\Bigram.Core.csproj", "{B2D3F073-A63B-48A8-A2FC-4C153B18CCAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bigram.Test", "Bigram.Test\Bigram.Test.csproj", "{F222571F-1E5B-4820-8417-463B16D6032F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bigram", "Bigram\Bigram.csproj", "{F382401D-2E7A-41B3-AFC9-C8B735356FC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF7A8280-80E6-4A59-86CE-C7C425177D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7A8280-80E6-4A59-86CE-C7C425177D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7A8280-80E6-4A59-86CE-C7C425177D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7A8280-80E6-4A59-86CE-C7C425177D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A03B7E-B72F-4403-A46C-CC92B33E3088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A03B7E-B72F-4403-A46C-CC92B33E3088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A03B7E-B72F-4403-A46C-CC92B33E3088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A03B7E-B72F-4403-A46C-CC92B33E3088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D3F073-A63B-48A8-A2FC-4C153B18CCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D3F073-A63B-48A8-A2FC-4C153B18CCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D3F073-A63B-48A8-A2FC-4C153B18CCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D3F073-A63B-48A8-A2FC-4C153B18CCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F222571F-1E5B-4820-8417-463B16D6032F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F222571F-1E5B-4820-8417-463B16D6032F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F222571F-1E5B-4820-8417-463B16D6032F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F222571F-1E5B-4820-8417-463B16D6032F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F382401D-2E7A-41B3-AFC9-C8B735356FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F382401D-2E7A-41B3-AFC9-C8B735356FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F382401D-2E7A-41B3-AFC9-C8B735356FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F382401D-2E7A-41B3-AFC9-C8B735356FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = VAE.CLI.Flags\Flags.csproj
+	EndGlobalSection
+EndGlobal
