@@ -43,8 +43,8 @@ namespace Bigram.Core
         /// <returns></returns>
         public long Add(string word1, string word2)
         {
-            word1 = this.CleanWord(word1);
-            word2 = this.CleanWord(word2);
+            word1 = CleanWord(word1);
+            word2 = CleanWord(word2);
 
             long currentCount = 0;
             Dictionary<string, long> firstWordMap = null;

@@ -75,5 +75,30 @@ namespace Bigram.Test
             Assert.AreEqual(1, count.Count());
             Assert.AreEqual(expectedValue, count.First());
         }
+
+        [TestCase("", false)]
+        [TestCase("Hare", false)]
+        [TestCase("Hare,", false)]
+        [TestCase("Fox.", true)]
+        [TestCase("Fox!", true)]
+        [TestCase("Fox?", true)]
+        public void TestIsEndOfLine(string word, bool expectedValue)
+        {
+            CommandLineTextParser parser = new CommandLineTextParser(new string[] { "test" });
+
+            Assert.AreEqual(expectedValue, parser.IsEndOfSentence(word));
+        }
+
+        [TestCase("", "")]
+        [TestCase("Hare", "hare")]
+        [TestCase("Hare,", "hare")]
+        [TestCase("Fox.", "fox")]
+        [TestCase("Fox!", "fox")]
+        [TestCase("Fox?", "fox")]
+        public void TestCleanWord(string word, string expectedValue)
+        {
+            Assert.AreEqual(expectedValue, BaseCounter.CleanWord(word));
+        }
+
     }
 }

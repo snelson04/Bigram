@@ -26,7 +26,7 @@ namespace Bigram.Core
             this._crossSentenceBoundaries = crossSentenceBoundaries;
         }
 
-        protected bool IsEndOfSentence(string word)
+        public  bool IsEndOfSentence(string word)
         {
             if (string.IsNullOrWhiteSpace(word))
                 return false;

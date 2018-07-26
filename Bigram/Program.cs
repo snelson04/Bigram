@@ -51,7 +51,7 @@ namespace Bigram
 
                 OutputResults(flags, counter, elapsed);    
             }
-            catch(FileNotFoundException ex)
+            catch(FileNotFoundException)
             {
                 Console.WriteLine(string.Format("Unable to find the file specified: {0}", flags.Filepath));
                 DisplayUsage(flags);

@@ -20,7 +20,7 @@ namespace Bigram.Core
 {
     public class BaseCounter
     {
-        protected string CleanWord(string word)
+        public static string CleanWord(string word)
         {            
             string lowerCaseWord = word.ToLower();
             return Regex.Replace(lowerCaseWord, @"\p{P}", "");
