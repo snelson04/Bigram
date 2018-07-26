@@ -1,12 +1,25 @@
-﻿using System;
+﻿/*
+Copyright 2018 Shawn Nelson
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bigram.Core
 {
-    public class MemoryCounter : ICounter
+    public class MemoryCounter : BaseCounter, ICounter
     {
         private Dictionary<String, Dictionary<String, long>> _BigramMap;
 
@@ -30,8 +43,8 @@ namespace Bigram.Core
         /// <returns></returns>
         public long Add(string word1, string word2)
         {
-            word1 = word1.ToLower();
-            word2 = word2.ToLower();
+            word1 = this.CleanWord(word1);
+            word2 = this.CleanWord(word2);
 
             long currentCount = 0;
             Dictionary<string, long> firstWordMap = null;

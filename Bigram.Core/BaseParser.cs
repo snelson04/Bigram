@@ -14,11 +14,26 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-
 namespace Bigram.Core
 {
-    public interface IParser
+    public class BaseParser 
     {
-        void Parse(ICounter counter);
+        protected bool _crossSentenceBoundaries;
+        protected string _sentenceBoundaries = ".!?";
+
+        protected BaseParser(bool crossSentenceBoundaries)
+        {
+            this._crossSentenceBoundaries = crossSentenceBoundaries;
+        }
+
+        protected bool IsEndOfSentence(string word)
+        {
+            if (string.IsNullOrWhiteSpace(word))
+                return false;
+
+            string endChar = word.Substring(word.Length - 1);
+
+            return this._sentenceBoundaries.Contains(endChar);
+        }
     }
 }

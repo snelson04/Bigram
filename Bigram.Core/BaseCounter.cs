@@ -14,11 +14,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using System.Text.RegularExpressions;
 
 namespace Bigram.Core
 {
-    public interface IParser
+    public class BaseCounter
     {
-        void Parse(ICounter counter);
+        protected string CleanWord(string word)
+        {            
+            string lowerCaseWord = word.ToLower();
+            return Regex.Replace(lowerCaseWord, @"\p{P}", "");
+        }
     }
 }

@@ -1,36 +1,17 @@
-VAE.CLI.Flags
+Bigram
 =============
 
-A lightweight and easy to use command line flags library with the following features.
+A command line tool to parse a text and output a histogram of the bigrams contained in it.
 
-* Typesafe
-* No Reflection
-* Allows custom flag parsing
-* Includes standard and useful builtin flag types.
-* Help text generation
-* Won't pollute your libraries with unnecessary attribute dependencies.
+* can receive the text via file or command line
+* utilizes VAE.CLI.Flags for command line options parsing
+* Bigrams parsing ends at sentence boundaries by default but can cross by use the -xsb option
 
-Example
+Examples
 -------
+	Bigram.exe --filepath LoremIpsum.txt
 
-    using VAE.CLI.Flags;
-    
-    namespace MyApp
-    {
-        public void Main(string[] args)
-        {
-            var parser = new Parser();
-            var intFlag = parser.AddIntFlag("myintflag", 5, "An integer flag");
-            var myCustomFlag = parser.Add<CustomThing>("myCustomFlag", new Val<Thing>(defaultThing,
-                (s) => {
-                    // custom parsing code here
-                    return thing;
-                }, "A custom Thing flag");
-            parser.Parse(args);
-        }
-    }
-
-It's as easy as that.
+	Bigram.exe The Quick Brown fox jumped over the quick blue hare.
 
 License
 =======

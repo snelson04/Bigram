@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseCounter.cs" />
+    <Compile Include="BaseParser.cs" />
     <Compile Include="BigramCountValue.cs" />
-    <Compile Include="CommandLineArgsParser.cs" />
+    <Compile Include="CommandLineTextParser.cs" />
     <Compile Include="ICounter.cs" />
     <Compile Include="IParser.cs" />
     <Compile Include="MemoryCounter.cs" />

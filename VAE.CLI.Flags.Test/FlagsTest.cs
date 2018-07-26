@@ -26,7 +26,7 @@ namespace VAE.CLI.Tests
     public class FlagsTest
     {
         [Test]
-        public void TestParser()
+        public void TestFlagParsing()
         {
             string[] args = new string[] {"--mystringflag", "test.txt", "-myintflag=10", "-myboolFlag" };
             var flags = new Parser();
@@ -50,7 +50,7 @@ namespace VAE.CLI.Tests
         }
 
         [Test]
-        public void TestParserErrors()
+        public void TestFlagParsingError()
         {
             string[] args = new string[] { "-myintflag=", "--mystringflag", "test.txt", "-myintflag=10", "-myboolFlag" };
             var flags = new Parser();
