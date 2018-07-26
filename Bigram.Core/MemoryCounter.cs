@@ -48,7 +48,7 @@ namespace Bigram.Core
 
             long currentCount = 0;
             Dictionary<string, long> firstWordMap = null;
-            firstWordMap = FindFirstWord(word1);
+            firstWordMap = this.FindFirstWord(word1);
 
             if (firstWordMap.ContainsKey(word2))
                 currentCount = 1 + firstWordMap[word2];

@@ -45,7 +45,7 @@ namespace Bigram
 
                 IParser parser = factory.CreateParser(flags);
 
-                ICounter counter = factory.CreateCounter(flags, parser);
+                ICounter counter = factory.CreateCounter(flags);
 
                 elapsed = PerformParse(parser, counter, flags.Time);
 

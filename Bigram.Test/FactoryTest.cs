@@ -36,6 +36,7 @@ namespace Bigram.Test
         {
             BigramFlags flags = new BigramFlags(new string[] { "-filepath", "ParseTest.txt" });
             IParser parser = Factory.GetFactory().CreateParser(flags);
+
             Assert.IsNotNull(parser as SimpleFileParser);
         }
 
@@ -44,16 +45,15 @@ namespace Bigram.Test
         {
             BigramFlags flags = new BigramFlags(new string[] { "The", "quick", "brown", "fox", "and", "the", "quick", "blue", "hare" });
             IParser parser = Factory.GetFactory().CreateParser(flags);
-            Assert.IsNotNull(parser as CommandLineTextParser);
 
+            Assert.IsNotNull(parser as CommandLineTextParser);
         }
 
         [Test]
         public void TestCreateMemoryCounter()
         {
-            BigramFlags flags = new BigramFlags(new string[] { "-filepath", "ParseTest.txt" });
-            IParser parser = Factory.GetFactory().CreateParser(flags);
-            ICounter counter = Factory.GetFactory().CreateCounter(flags, parser);
+            BigramFlags flags = new BigramFlags(new string[] { "-filepath", "ParseTest.txt" });            
+            ICounter counter = Factory.GetFactory().CreateCounter(flags);
 
             Assert.IsNotNull(counter as MemoryCounter);
         }

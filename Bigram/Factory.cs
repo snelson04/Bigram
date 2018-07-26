@@ -22,7 +22,7 @@ namespace Bigram
     public interface IFactory
     {
         IParser CreateParser(BigramFlags flags);
-        ICounter CreateCounter(BigramFlags flags, IParser parser);
+        ICounter CreateCounter(BigramFlags flags);
     }
 
     public class Factory : IFactory
@@ -49,7 +49,7 @@ namespace Bigram
         }
 
 
-        public ICounter CreateCounter(BigramFlags flags, IParser parser)
+        public ICounter CreateCounter(BigramFlags flags)
         {
             return new MemoryCounter();
         }
